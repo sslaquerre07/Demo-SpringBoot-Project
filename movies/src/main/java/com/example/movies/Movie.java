@@ -23,7 +23,7 @@ public class Movie {
     //Lets framework know that this is the primary identifier
     @Id
     private ObjectId id;
-    private String imdbID;
+    private String imdbId;
     private String title;
     private String releaseDate;
     private String trailerLink;

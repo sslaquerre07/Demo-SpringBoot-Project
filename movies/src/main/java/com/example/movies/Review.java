@@ -18,4 +18,9 @@ public class Review {
     @Id
     private ObjectId id;
     private String body;
+
+    //Can define a custom ctor as well
+    public Review(String body){
+        this.body = body;
+    }
 }

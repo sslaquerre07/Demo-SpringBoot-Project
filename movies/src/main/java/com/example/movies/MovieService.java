@@ -20,14 +20,13 @@ public class MovieService {
 
     //Optional class needed since there is a possibility that the id does not exist
     //Note: This works for the private attribute that we labled with the id annotation in movie
-    public Optional<Movie> singleMovie(ObjectId id){
-        return movieRepository.findById(id);
-    }
+    // public Optional<Movie> singleMovie(ObjectId id){
+    //     return movieRepository.findById(id);
+    // }
 
     //This is the more secure version by displaying the imdb id to the public
-    //In theory should work but for some reason the imdbIds do not load properly
-    //This style of dynamic query will work for any attribute of the class as long as it is unique
-    // public Optional<Movie> singleMovie(String imdbId){
-    //     return movieRepository.findMovieByImdbID(imdbId);
-    // }
+    // This style of dynamic query will work for any attribute of the class as long as it is unique
+    public Optional<Movie> singleMovie(String imdbId){
+        return movieRepository.findMovieByImdbId(imdbId);
+    }
 }

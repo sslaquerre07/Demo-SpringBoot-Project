@@ -9,5 +9,5 @@ import org.springframework.stereotype.Repository;
 //Must let it know what kind of data and id you are dealing with
 @Repository
 public interface MovieRepository extends MongoRepository<Movie, ObjectId>{
-    Optional<Movie> findMovieByImdbID(String imdbId);
+    Optional<Movie> findMovieByImdbId(String imdbId);
 }
